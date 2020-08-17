@@ -5,11 +5,7 @@ import Card from '../../components/UI/Card';
 import './style.css';
 import RecentPosts from './RecentPosts';
 
-const SideImage = (props)=>{
-    <div className="gallaryImage" style={{height:`${props.sideImageHeight}px`}}>
-        <img alt="" src={props.src} />        
-    </div>
-}
+
 
 const Home = props => {
     // return <Sidebar width={'100%'} />;
