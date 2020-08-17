@@ -1,11 +1,47 @@
 import React from 'react';
 import './style.css';
-import Sidebar from '../../components/Sidebar';
+// import Sidebar from '../../components/Sidebar';
 import Card from '../../components/UI/Card';
 import './style.css';
 import RecentPosts from './RecentPosts';
+import blogData from '../../assets/data/post.json';
+import Layout from '../../components/Layout';
 
+const SideImage = (props)=>{
+    return (
+        <div className="gallaryImage" style={{height:`${props.height}px`}}>
+            <img alt="" src={props.src} />        
+        </div>
+    );
+}
 
+const ImageGallary= (props) => {
+    return (
+        <div className="gallaryPost" style={props.gallaryStyle}>
+        <section style={{width:'70%'}}>
+            <div className="gallaryImage">
+                <img alt="" src={require('../../assets/blog-images/'+props.imagesArray[0])} />        
+            </div>
+        </section>
+        <section className="sideImageWrapper" style={{width:'30%'}}>
+            <SideImage 
+                height= {props.sideImageHeight}
+                src={require("../../assets/blog-images/"+props.imagesArray[1])} 
+            />
+            <SideImage 
+                height={props.sideImageHeight}
+                src={require("../../assets/blog-images/"+props.imagesArray[2])} 
+            />
+            <SideImage 
+                height={props.sideImageHeight}
+                src={require("../../assets/blog-images/"+props.imagesArray[3])} 
+            />
+        </section>
+    </div>
+   
+    )
+
+ }
 
 const Home = props => {
     // return <Sidebar width={'100%'} />;
@@ -16,30 +52,24 @@ const Home = props => {
     };
 
     const sideImageHeight = gallaryHeight/3;
+    const imgArray = blogData.data.map(post=>post.blogImage)
 
     return (
         <div>
             <Card>
-                <div className="gallaryPost" style={gallaryStyle}>
-                    <section style={{width:'70%'}}>
-                        <div className="gallaryImage">
-                            <img alt="" src={require('../../assets/blog-images/team.jpg')} />        
-                        </div>
-                    </section>
-                    <section className="sideImageWrapper" style={{width:'30%'}}>
-                        
-                        <div className="gallaryImage" style={{height:`${sideImageHeight}px`}}>
-                            <img alt="" src={require('../../assets/blog-images/mug.jpg')} />        
-                        </div>
-                        <div className="gallaryImage" style={{height:`${sideImageHeight}px`}}>
-                            <img alt="" src={require('../../assets/blog-images/blog.jpg')} />        
-                        </div>
-                    </section>
-                </div>
+                <ImageGallary 
+                largeWidth = "70%"
+                smallWidth = "30%"
+                sideImageHeight = {sideImageHeight}
+                gallaryStyle = {gallaryStyle}
+                imagesArray ={imgArray}
+                />
+                
             </Card>   
             <section className="HomeContainer">
-                <RecentPosts style={{width:'70%'}} />
-                <Sidebar />
+                <Layout>
+                    <RecentPosts style={{width:'70%'}} />
+                </Layout>
             </section>   
         </div>
     )
