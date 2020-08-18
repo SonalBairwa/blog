@@ -22,7 +22,7 @@ const Navbar=(props)=> {
                 <li><NavLink to="/">Home</NavLink></li>
                 <li><NavLink to="/contact-us">Contact Us</NavLink></li>
                 {/* <li><NavLink to="/about-us">About Us</NavLink></li> */}
-                <li><NavLink to="/post/1">Posts</NavLink></li>
+                <li><NavLink to="/post/fitness-mantra-to-live-fit-life">Posts</NavLink></li>
             </ul>
             <div className="search">
                 <form onSubmit={submitSearch} >

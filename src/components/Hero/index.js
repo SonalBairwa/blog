@@ -2,6 +2,7 @@ import React from 'react';
 import Card from '../UI/Card';
 import Logo from '../Logo';
 import Navbar from '../Navbar';
+import './style.css';
 
 const Hero=(props)=> {
     return (

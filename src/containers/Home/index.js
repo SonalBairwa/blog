@@ -18,27 +18,22 @@ const SideImage = (props)=>{
 const ImageGallary= (props) => {
     return (
         <div className="gallaryPost" style={props.gallaryStyle}>
-        <section style={{width:'70%'}}>
-            <div className="gallaryImage">
-                <img alt="" src={require('../../assets/blog-images/'+props.imagesArray[0])} />        
-            </div>
-        </section>
-        <section className="sideImageWrapper" style={{width:'30%'}}>
-            <SideImage 
-                height= {props.sideImageHeight}
-                src={require("../../assets/blog-images/"+props.imagesArray[1])} 
-            />
-            <SideImage 
-                height={props.sideImageHeight}
-                src={require("../../assets/blog-images/"+props.imagesArray[2])} 
-            />
-            <SideImage 
-                height={props.sideImageHeight}
-                src={require("../../assets/blog-images/"+props.imagesArray[3])} 
-            />
-        </section>
-    </div>
-   
+            <section style={{width:props.largeWidth}}>
+                <div className="gallaryImage">
+                    <img alt="" src={require('../../assets/blog-images/'+props.imagesArray[0])} />        
+                </div>
+            </section>
+            <section className="sideImageWrapper" style={{width: props.smallWidth}}>
+            {
+                props.imagesArray.map(image=>
+                    <SideImage 
+                    height= {props.sideImageHeight}
+                    src={require("../../assets/blog-images/"+image)} 
+                />
+                    )
+            }
+            </section>
+        </div>
     )
 
  }
@@ -66,11 +61,9 @@ const Home = props => {
                 />
                 
             </Card>   
-            <section className="HomeContainer">
-                <Layout>
-                    <RecentPosts style={{width:'70%'}} />
-                </Layout>
-            </section>   
+            <Layout>
+                <RecentPosts style={{width:'70%'}} />
+            </Layout>
         </div>
     )
 }

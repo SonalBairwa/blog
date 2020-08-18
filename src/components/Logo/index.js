@@ -3,7 +3,7 @@ import './style.css';
 const Logo=(props)=> {
     return (
         <div className="logo">
-            <a href="#">Sonal Logo</a>
+            <a href="#">Sonal Bairwa</a>
         </div>
     )
 }
