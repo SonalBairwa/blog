@@ -5,8 +5,8 @@ function Header() {
         <div>
             <header className="header">
                 <nav className="headerMenu">
-                    <a href="#">Home</a>
-                    <a href="#">About</a>
+                    <a href="#"></a>
+                    <a href="#"></a>
                 </nav>
                 
             </header>

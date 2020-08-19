@@ -3,6 +3,7 @@ import './style.css';
 import Card from '../UI/Card';
 import blogPostData from '../../assets/data/post.json';
 import { NavLink } from 'react-router-dom';
+import Typography from '@material-ui/core/Typography';
 
 const Sidebar = (props) =>{
 
@@ -14,12 +15,13 @@ const Sidebar = (props) =>{
 
     return (
         <div className="sidebarContainer" style={{width:props.width}}>
-            <Card style={{marginBottom:"20px",padding:"10px",boxSizing:"border-box"}}>
+            <div>
+            <Card>
                 <div className="cardHeader">
                     <span>About Us</span>        
                 </div>
                 <div className="cardImageContainer">
-                    <img alt="" src={require('../../assets/blog-images/blog.jpg')} />        
+                    <img alt="" src={require('../../assets/blog-images/shree.jpg')} />        
                 </div>
                 <div className="cardBody">
                     <p className="personalBio">
@@ -27,7 +29,7 @@ const Sidebar = (props) =>{
                     </p>
                 </div>
             </Card>
-            <Card style={{marginBottom:"20px",padding:"10px",boxSizing:"border-box"}}>
+            <Card>
                 <div className="cardHeader">
                     <span>Recent Posts</span>
                 </div>
@@ -48,7 +50,7 @@ const Sidebar = (props) =>{
                     </div>
                 
             </Card>
-            <Card style={{marginBottom:"20px",padding:"10px",boxSizing:"border-box"}}>
+            <Card>
                 <div className="cardHeader">
                     <span>Wooden</span>
                 </div>
@@ -56,6 +58,7 @@ const Sidebar = (props) =>{
                     <img alt="" src={require('../../assets/blog-images/wooden.jpg')} />        
                 </div>
             </Card>
+            </div>
         </div>
         
     )
