@@ -27,6 +27,7 @@ const ImageGallary= (props) => {
             {
                 props.imagesArray.map(image=>
                     <SideImage 
+                    key ={image} 
                     height= {props.sideImageHeight}
                     src={require("../../assets/blog-images/"+image)} 
                 />

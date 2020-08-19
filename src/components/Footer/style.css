@@ -1,0 +1,8 @@
+.footerContainer{
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact {
+    display: flex;
+}
