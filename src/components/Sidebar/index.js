@@ -58,7 +58,7 @@ const Sidebar = (props) =>{
                     <img alt="" src={require('../../assets/blog-images/wooden.jpg')} />        
                 </div>
             </Card>
-            </div>
+            </div> 
         </div>
         
     )
