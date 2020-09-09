@@ -6,7 +6,7 @@ import './style.css';
 
 const Hero=(props)=> {
     return (
-        <div>
+        <div className="mainContainer">
             <Card>
                 <div style={{padding :"50px 0"}}>
                     <Logo />  

@@ -1,9 +1,9 @@
-/* .mainContainer div{
-    background-image:url("../../assets/blog-images/background.jpg");
+.mainContainer{
+    /* background-image: url('../../assets/blog-images/ride.jpg'); */
     height:100%; 
     opacity: 0.9;
   background-position: center; 
   background-repeat: no-repeat; 
   background-size: cover;
   overflow: hidden;
-} */
+}
